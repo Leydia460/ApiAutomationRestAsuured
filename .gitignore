@@ -1,0 +1,25 @@
+
+$ git status
+    [...]
+    # Arquivos não rastreados:
+    [...]
+    # Documentation/foo.html
+    # Documentação/gitignore.html
+    # arquivo.o
+    # lib.a
+    # src/internal.o
+    [...]
+    $ cat .git/info/excluir
+    # ignora objetos e arquivos, em qualquer lugar da árvore.
+    *.[oa]
+    $ cat Documentação/.gitignore
+    # ignora arquivos html gerados,
+    *.html
+    # exceto foo.html que é mantido manualmente
+    !foo.html
+    $ git status
+    [...]
+    # Arquivos não rastreados:
+    [...]
+    # Documentation/foo.html
+    [...]
